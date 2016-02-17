@@ -117,9 +117,9 @@ if __name__ == "__main__":
     motor1 = StepperMotor(26,21,20,16)#left motor
     motor2 = StepperMotor(5,6,13,19)#right motor
     steps = 0
-    thread0 = motor0.turn_degreesThreaded(10, 'cw', 50)
-    thread1 = motor1.turn_degreesThreaded(40, 'ccw', 50)
-    thread2 = motor2.turn_degreesThreaded(40, 'cw', 50)
+    thread0 = motor0.turn_degreesThreaded(20, 'ccw', 50)
+    thread1 = motor1.turn_degreesThreaded(40, 'cw', 50)
+    thread2 = motor2.turn_degreesThreaded(40, 'ccw', 50)
     thread0.join()
     thread1.join()
     thread2.join()
