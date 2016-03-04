@@ -1,21 +1,14 @@
-import sys, pygame
+#python3
 
+import octoprint.plugin
 
-pygame.init()
-black = (0,0,0)
-width = 1280
-height = 1024
-window = pygame.display.set_mode((width, height),0,32)
-window.fill(black)
-
-while True:
-    event = pygame.event.get()
-    for e in event:
-        print(e.key+"\n")
-        if(e.key == "q"):
-            pygame.quit()
-            sys.exit()
-    print("Char: "+c+"\n")
     
     
- 
+ __plugin_name__ = "Robotic Arm"
+__plugin_version__ = "1.0.0"
+__plugin_description__ = "Robotic Arm Control for Octoprint"
+__plugin_implementation__ = RoboticArm()
+
+class RoboticArm(octoprint.plugin.StartupPlugin):
+	def on_after_startup(self):
+		self._logger.info("Hello World!")
