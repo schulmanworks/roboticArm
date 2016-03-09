@@ -4,7 +4,7 @@ import octoprint.plugin
 
     
     
- __plugin_name__ = "Robotic Arm"
+__plugin_name__ = "Robotic Arm"
 __plugin_version__ = "1.0.0"
 __plugin_description__ = "Robotic Arm Control for Octoprint"
 __plugin_implementation__ = RoboticArm()
