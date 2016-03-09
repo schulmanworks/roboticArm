@@ -1,0 +1,3 @@
+[octoprint.plugin]
+roboticArm = octoprint_roboticArm
+
