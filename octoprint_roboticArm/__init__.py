@@ -1,5 +1,4 @@
 #python3
-import stepperMotor.StepperMotor
 import octoprint.plugin
 
 class RoboticArm(octoprint.plugin.StartupPlugin, octoprint.plugin.TemplatePlugin):
