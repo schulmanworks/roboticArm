@@ -102,8 +102,7 @@ class StepperMotor(object):
         #wait for thread to become inactive
         while threading.active_count() > 1:
             time.sleep(1)
-            print('thread detected')
-            print(threading.enumerate())
+            
         GPIO.cleanup()
 
     def turn_degreesThreaded(self, deg, dir, speed):
