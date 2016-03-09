@@ -2,7 +2,7 @@
 import stepperMotor.StepperMotor
 import octoprint.plugin
 
-class RoboticArm(octoprint.plugin.StartupPlugin):
+class RoboticArm(octoprint.plugin.StartupPlugin, octoprint.plugin.TemplatePlugin):
 	def on_after_startup(self):
 		self._logger.info("Hello World!")
     
