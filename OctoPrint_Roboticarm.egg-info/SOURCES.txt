@@ -8,4 +8,5 @@ OctoPrint_Roboticarm.egg-info/entry_points.txt
 OctoPrint_Roboticarm.egg-info/not-zip-safe
 OctoPrint_Roboticarm.egg-info/requires.txt
 OctoPrint_Roboticarm.egg-info/top_level.txt
+octoprint_roboticArm/StepperMotor.py
 octoprint_roboticArm/__init__.py
