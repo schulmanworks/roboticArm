@@ -9,7 +9,7 @@ class RoboticArm(octoprint.plugin.StartupPlugin, octoprint.plugin.TemplatePlugin
 		self._logger.info("Hello World!")
     def get_assets(self):
     	return dict(
-			js=["js/robitcArm_viewmodel.js"]
+			js=["js/roboticArm_viewmodel.js"]
 		)
 
 __plugin_implementation__ = RoboticArm()
