@@ -3,7 +3,7 @@ import time
 import threading
 
 def rotate(StepperMotor, deg, dir, speed)
-	turn_degrees(self, deg, dir, speed)
+	turn_degrees(StepperMotor, deg, dir, speed)
 	return
 
 
