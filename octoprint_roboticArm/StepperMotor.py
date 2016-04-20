@@ -115,7 +115,7 @@ class StepperMotor(object):
         return thread
         
 
-def raise_lower(self, motor0, motor1, deg, dir, speed): #1, 2
+def raise_lower(motor0, motor1, deg, dir, speed): #1, 2
     thread0 = motor1.turn_degreesThreaded(deg, dir, speed)
     thread1 = motor2.turn_degreesThreaded(deg, dir, speed)
     thread0.join()
