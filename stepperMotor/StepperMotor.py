@@ -1,6 +1,12 @@
 import RPi.GPIO as GPIO
 import time
 import threading
+
+def rotate(StepperMotor, deg, dir, speed)
+	turn_degrees(self, deg, dir, speed)
+	return
+
+
 class StepperMotor(object):
     def __init__(self, pin0=5, pin1=6, pin2=13, pin3=19):
         self.pin0 = pin0
@@ -71,6 +77,7 @@ class StepperMotor(object):
         else:
                 raise Exception('Invalid input dir', 'Opitons are cw or ccw')
         return
+
     def turn_degrees(self, deg, dir, speed): #speed is degrees per second
         steps = deg*11#this leaves .377777 steps per degree since I rounded 11 down
         degrees_turned = 0
@@ -85,9 +92,8 @@ class StepperMotor(object):
             if degrees_turned % 3 == 0 and degrees_turned != 0:
                 counter -= 1
         
-        return
-
-
+        return  
+          
 
                 
     def _reset_pins(self):
