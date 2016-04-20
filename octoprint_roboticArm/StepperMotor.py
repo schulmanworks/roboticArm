@@ -1,11 +1,6 @@
 import RPi.GPIO as GPIO
 import time
 import threading
-
-def rotate (motor, deg, dir, speed):
-	StepperMotor.turn_degrees(motor, deg, dir, speed):
-	return
-
 class StepperMotor(object):
     def __init__(self, pin0=5, pin1=6, pin2=13, pin3=19):
         self.pin0 = pin0
@@ -76,6 +71,7 @@ class StepperMotor(object):
         else:
                 raise Exception('Invalid input dir', 'Opitons are cw or ccw')
         return
+
     def turn_degrees(self, deg, dir, speed): #speed is degrees per second
         steps = deg*11#this leaves .377777 steps per degree since I rounded 11 down
         degrees_turned = 0
@@ -116,17 +112,17 @@ class StepperMotor(object):
         return thread
         
 
-if __name__ == "__main__":
-    motor0 = StepperMotor(4,17,27,22)#bottom motor
-    motor1 = StepperMotor(26,21,20,16)#left motor
-    motor2 = StepperMotor(5,6,13,19)#right motor
-    steps = 0
-    thread0 = motor0.turn_degreesThreaded(20, 'ccw', 50)
-    thread1 = motor1.turn_degreesThreaded(40, 'cw', 50)
-    thread2 = motor2.turn_degreesThreaded(40, 'ccw', 50)
+def raise_lower(self, motor0, motor1, deg, dir, speed): #1, 2
+    thread0 = motor1.turn_degreesThreaded(deg, dir, speed)
+    thread1 = motor2.turn_degreesThreaded(deg, dir, speed)
     thread0.join()
     thread1.join()
-    thread2.join()
     GPIO.cleanup()
+        
+if __name__ == "__main__":
+    motor0 = StepperMotor(26,21,20,16)#left motor
+    motor1 = StepperMotor(5,6,13,19)#right motor
+    steps = 0
+    raise_lower(motor0, motor1, 30, 'cw', 50)
     
    
