@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 import threading
 def rotate (motor, deg, dir, speed):
-	StepperMotor.turn_degrees(motor, deg, dir, speed):
+	StepperMotor.turn_degrees(motor, deg, dir, speed)
 	return
 class StepperMotor(object):
     def __init__(self, pin0=5, pin1=6, pin2=13, pin3=19):
